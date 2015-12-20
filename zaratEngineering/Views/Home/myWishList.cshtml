@@ -1,0 +1,144 @@
+﻿@model zaratEngineering.Models.WishItemImage
+@{
+    ViewBag.Title = "myWishList";
+    //zaratEngineering.Models.WishItemImage t = new zaratEngineering.Models.WishItemImage();
+    //var path = t.ImagePath;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <h1>@ViewBag.Title</h1>
+    @using (Html.BeginForm())
+    {
+        <div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <!-- Items -->
+                    <tr>
+                        <td class="col-md-2">
+                            <div class="no-wrap">Galagy S6 Edge Gold</div>
+                        </td>
+                        <td class="no-wrap">
+                            <ul>
+                                <li>Location: T-mobile</li>
+                                <li>Price: $32.50/month</li>
+                                <li>On Sale?: NO</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <a href='@Url.Action("FullImage", "Home")'>
+                                <img src="~/images/s6-edge.jpg" alt="myWishList" class="img-responsive">
+                                @{ Model.ImagePath = "~/images/s6-edge.jpg";}
+                            </a>
+                            @*<img src="~/images/s6-edge.jpg" alt="myWishList" class="img-responsive">*@
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td class="col-md-2">
+                            <div class="no-wrap">Hollister Cologne</div>
+                        </td>
+                        <td class="no-wrap">
+                            <ul>
+                                <li>Location: Layton Hills Mall</li>
+                                <li>Price: $50.0</li>
+                                <li>On Sale?: NO</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <a href='@Url.Action("FullImage", "Home")'>
+                                <img src="~/images/holister-col.jpeg" alt="myWishList" class="img-responsive">
+                                @*<img src="~/images/s6-edge.jpg" alt="myWishList" class="img-responsive">*@
+                                @{ Model.ImagePath = "~/images/holister-col.jpeg";}
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-md-2">
+                            <div class="no-wrap">Surface Pro 3</div>
+                        </td>
+                        <td class="no-wrap">
+                            <ul>
+                                <li>Location: Microsoft Store/Best Buy</li>
+                                <li>Price: $500.00</li>
+                                <li>On Sale?: YES</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <a href='@Url.Action("FullImage", "Home")'>
+                                <img src="~/images/suf-pro.jpg" alt="myWishList" class="img-responsive">
+                                @*<img src="~/images/s6-edge.jpg" alt="myWishList" class="img-responsive">*@
+                                @{ Model.ImagePath = "~/images/suf-pro.jpg";}
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <!-- NAME -->
+                        <td class="col-md-2">
+                            <div class="no-wrap">Moto 360 Brown Band</div>
+                        </td>
+                        <!-- DESCRIPTION -->
+                        <td class="no-wrap">
+                            <ul>
+                                <li>Location: Best Buy</li>
+                                <li>Price: $30.00</li>
+                                <li>On Sale?: NO</li>
+                            </ul>
+                        </td>
+                        <!-- IMAGE -->
+                        <td>
+                            <a href='@Url.Action("FullImage", "Home")'>
+                                <img src="~/images/moto-band.png" alt="myWishList" class="img-responsive">
+                                @*<img src="~/images/s6-edge.jpg" alt="myWishList" class="img-responsive">*@
+                                @{ Model.ImagePath = "~/images/moto-band.png";}
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <!-- NAME -->
+                        <td class="col-md-2">
+                            <div class="no-wrap">Fallout 4</div>
+                        </td>
+                        <!-- DESCRIPTION -->
+                        <td class="no-wrap">
+                            <ul>
+                                <li>Location: Best Buy</li>
+                                <li>Price: $60.00</li>
+                                <li>On Sale?: NO</li>
+                            </ul>
+                        </td>
+                        <!-- IMAGE -->
+                        <td>
+                            <a href='@Url.Action("FullImage", "Home")'>
+                                <img src="~/images/fo4.jpg" alt="myWishList" class="img-responsive">
+                                @*<img src="~/images/s6-edge.jpg" alt="myWishList" class="img-responsive">*@
+                                @* @{ Model.ImagePath = "~/images/fo4.jpg";}*@
+                            </a>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    }
+</body>
+</html>

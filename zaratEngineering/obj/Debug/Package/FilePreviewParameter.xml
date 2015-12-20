@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="zaratEngineering20151210072358" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^\\\\vmware-host\\shared\ folders\\documents\\visual\ studio\ 2013\\Projects\\zaratEngineering\\zaratEngineering\\obj\\Debug\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^\\\\vmware-host\\shared\ folders\\documents\\visual\ studio\ 2013\\Projects\\zaratEngineering\\zaratEngineering\\obj\\Debug\\Package\\PackageTmp$" />
+  </parameter>
+</parameters>

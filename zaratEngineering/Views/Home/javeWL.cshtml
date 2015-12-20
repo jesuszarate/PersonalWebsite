@@ -1,0 +1,77 @@
+﻿@model zaratEngineering.Models.WishItemImage
+@{
+    ViewBag.Title = "myWishList";
+    //zaratEngineering.Models.WishItemImage t = new zaratEngineering.Models.WishItemImage();
+    //var path = t.ImagePath;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <h1>@ViewBag.Title</h1>
+    @using (Html.BeginForm())
+    {
+        <div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <!-- Items -->
+                    <tr>
+                        <td class="col-md-2">
+                            <div class="no-wrap">Rinat Supreme Gloves</div>
+                        </td>
+                        <td class="no-wrap">
+                            <ul>
+                                <li>Location: Soccer.com</li>
+                                <li>Price: $73.99</li>
+                                <li>On Sale?: NO</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <a href='@Url.Action("FullImage", "Home")'>
+                                <img src="~/images/gloves.png" alt="myWishList" class="img-responsive">
+                                @{ Model.ImagePath = "~/images/s6-edge.jpg";}
+                            </a>
+                            @*<img src="~/images/s6-edge.jpg" alt="myWishList" class="img-responsive">*@
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td class="col-md-2">
+                            <div class="no-wrap">Gold Watch</div>
+                        </td>
+                        <td class="no-wrap">
+                            <ul>
+                                <li>Location: TJMaxx</li>
+                                <li>Price: $120.00</li>
+                                <li>On Sale?: YES</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <a href='@Url.Action("FullImage", "Home")'>
+                                <img src="~/images/gold-watch.jpg" alt="myWishList" class="img-responsive">
+                                @*<img src="~/images/s6-edge.jpg" alt="myWishList" class="img-responsive">*@
+                                @{ Model.ImagePath = "~/images/holister-col.jpeg";}
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    }
+</body>
+</html>
